@@ -11,8 +11,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 #the decouple comfig retrieves the data from .env file.
 SECRET_KEY=config('SECRET_KEY')#all these are set in the .env file
 DEBUG=config('DEBUG', default=False, cast=bool)#The debug value is True or False so to use that we cast it to boolean using cast=bool
-EMAIL_HOST=config('EMAIL_HOST', default='localhost') 
-EMAIL_PORT=config('EMAIL_PORT', default=25,cast=int)#Email port is an integer so we cast it to int value.
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
