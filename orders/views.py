@@ -90,9 +90,9 @@ def place_order(request):
             order.vendors.add(*vendors_ids)
             order.save()
 
-            # RazorPay Payment
+            # RazorPay Payment data to send data to razorpay server
             DATA = {
-                "amount": float(order.total) * 100,
+                "amount": float(order.total) * 100, # cause razorpay only accepts paise
                 "currency": "INR",
                 "receipt": "receipt #"+order.order_number,
                 "notes": {
